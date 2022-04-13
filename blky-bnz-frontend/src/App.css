@@ -1,38 +1,213 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.mainContainer {
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  width: 100%;
+  height: 100vh;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  flex-direction: row;
+}
+/*Test Tube*/
+.testTube {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 400px;
+  height: 500px;
+  /* border: 1px solid red; */
+}
+.testSubject {
+  display: flex;
+  height: 430px;
+  width: fit-content;
+}
+.person {
+  display: flex;
+  width: 100%;
 }
 
-.App-link {
-  color: #61dafb;
+.scanner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 160px;
+  height: 135px;
+  border: 9px solid rgb(75, 75, 75);
+  border-radius: 15px;
+  position: absolute;
+  background-color: rgba(0, 26, 255, 0.7);
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.light {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  justify-self: flex-start;
+  align-self: flex-start;
+  width: 170px;
+  height: 1px;
+  border: 2px solid rgb(255, 255, 255);
+  background-color: white;
+  box-shadow: 0 3px 15px rgb(255, 255, 255);
+  border-radius: 15px;
+  animation: floating 3s ease-in-out infinite;
+  opacity: 0.9;
+}
+@keyframes floating {
+  0% {
+    transform: translate(0, 15px);
   }
-  to {
-    transform: rotate(360deg);
+  50% {
+    transform: translate(0, 120px);
+  }
+  100% {
+    transform: translate(0, 15px);
+  }
+}
+
+/*Exray Results*/
+.anatomy {
+  display: flex;
+  width: 300px;
+  height: 500px;
+  border: 20px solid coral;
+  border-radius: 50px;
+}
+
+/*food*/
+.foodContainer {
+  display: flex;
+  width: 500px;
+  height: 500px;
+  border: 1px solid rgb(255, 0, 0);
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+}
+.machineContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.foodTop {
+  display: flex;
+  width: 100%;
+  justify-content: flex-start;
+  align-items: center;
+}
+.connector {
+  display: flex;
+  width: 15%;
+  height: 40px;
+  border: 10px solid rgb(87, 233, 94);
+}
+.machine {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  flex-direction: row;
+  width: 275px;
+  height: 200px;
+  border: 20px solid rgb(197, 50, 255);
+  border-radius: 50px;
+}
+.machineBottom {
+  display: flex;
+  width: 50px;
+  height: 10px;
+  border-left: 20px solid rgb(197, 50, 255);
+  border-bottom: 20px solid rgb(197, 50, 255);
+  border-right: 20px solid rgb(197, 50, 255);
+}
+.gear1 {
+  display: flex;
+  background-color: white;
+  align-self: flex-start;
+  height: 50px;
+  width: 50px;
+  border: 10px dashed rgb(255, 255, 255);
+  background-color: rgb(233, 87, 226);
+  border-radius: 360%;
+  animation: rotate 4s infinite linear;
+  top: 90px;
+  left: 15px;
+}
+.gear2 {
+  display: flex;
+  background-color: white;
+  align-self: flex-end;
+  height: 100px;
+  width: 100px;
+  border: 10px dashed rgb(255, 255, 255);
+  background-color: coral;
+  border-radius: 360%;
+  animation: counterRotate 8s infinite linear;
+  top: 90px;
+  left: 15px;
+}
+.gear3 {
+  display: flex;
+  background-color: white;
+  align-self: flex-start;
+  height: 25px;
+  width: 25px;
+  border: 7px dashed rgb(255, 255, 255);
+  background-color: rgb(125, 251, 255);
+  border-radius: 360%;
+  animation: rotate 3s infinite linear;
+  top: 90px;
+  left: 15px;
+}
+.gear4 {
+  display: flex;
+  background-color: white;
+  height: 30px;
+  width: 30px;
+  border: 10px dashed rgb(255, 255, 255);
+  background-color: rgb(255, 230, 0);
+  border-radius: 360%;
+  animation: counterRotate 4s infinite linear;
+  top: 90px;
+  left: 15px;
+}
+.gear5 {
+  display: flex;
+  background-color: white;
+  height: 60px;
+  width: 60px;
+  border: 10px dashed rgb(255, 255, 255);
+  background-color: rgb(87, 233, 94);
+  border-radius: 360%;
+  animation: rotate 6s infinite linear;
+  top: 90px;
+  left: 15px;
+}
+.gear6 {
+  display: flex;
+  background-color: white;
+  height: 40px;
+  width: 40px;
+  border: 10px dashed rgb(255, 255, 255);
+  background-color: rgb(87, 102, 233);
+  border-radius: 360%;
+  animation: counterRotate 5s infinite linear;
+  top: 90px;
+  left: 15px;
+}
+.foodStyle {
+  display: flex;
+  width: 200px;
+  height: 200px;
+  border: 1px solid red;
+}
+
+@keyframes rotate {
+  100% {
+    transform: rotateZ(360deg);
+  }
+}
+@keyframes counterRotate {
+  100% {
+    transform: rotateZ(-360deg);
   }
 }
