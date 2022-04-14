@@ -277,21 +277,24 @@ nav {
   right: 60px;
   height: 700px;
   width: 400px;
-  border: 1px solid red;
+  /* border: 1px solid red; */
 }
 .organDetails {
   display: flex;
   flex-direction: column;
-  gap: 0;
+  gap: 10px;
   justify-content: flex-start;
   align-items: flex-start;
   flex-wrap: wrap;
   font-size: 18px;
   width: 350px;
   height: 400px;
-  border: 1px solid red;
+  /* border: 1px solid red; */
+  color: grey;
 }
-
+span {
+  color: black;
+}
 @keyframes appear {
   from {
     opacity: 0;

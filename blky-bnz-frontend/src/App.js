@@ -244,22 +244,17 @@ function App() {
             </Routes>
           </div>
           <div className="foodContainer">
-            <Routes>
-              <Route
-                path="/"
-                element={organ.map(
-                  (data) =>
-                    data.name.includes({ detail }) && (
-                      <OrganData
-                        name={data.name}
-                        system={data.system}
-                        description={data.description}
-                        symptom={data.symptom}
-                      />
-                    )
-                )}
-              />
-            </Routes>
+            {organ.map(
+              (data) =>
+                data.name.includes(detail) && (
+                  <OrganData
+                    name={data.name}
+                    system={data.system}
+                    symptom={data.symptom}
+                    description={data.description}
+                  />
+                )
+            )}
           </div>
         </div>
       </div>

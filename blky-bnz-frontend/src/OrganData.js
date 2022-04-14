@@ -1,19 +1,20 @@
 function OrganData(prop) {
   return (
     <div className="organDetails">
+      <img src={prop.img} />
       <p>
-        Name: {prop.name}
+        <span>Name:</span> {prop.name}
         <br />
-        System: {prop.system}
+        <span>System:</span> {prop.system}
         <br />
-        Description: {prop.discription}
+        <span>Description:</span> {prop.description}
         <br />
-        Symptoms: {prop.symptom}
+        <span>Symptoms:</span> {prop.symptom}
         <br />
         <form>
-          New Symptoms:
+          <span> New Symptoms:</span>
           <input type="string"></input>
-          <button submit=""></button>
+          <button submit="">Submit</button>
         </form>
       </p>
     </div>
