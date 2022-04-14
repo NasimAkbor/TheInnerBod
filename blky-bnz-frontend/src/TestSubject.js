@@ -1,4 +1,4 @@
-import Person from "./Person.png";
+import Skin from "./skin_system.jpeg";
 function TestSubject() {
   return (
     <div className="testTube">
@@ -6,7 +6,7 @@ function TestSubject() {
         <div className="light"></div>
       </div>
       <div className="testSubject">
-        <img src={Person} className="person" />
+        <img src={Skin} className="person" />
       </div>
     </div>
   );
