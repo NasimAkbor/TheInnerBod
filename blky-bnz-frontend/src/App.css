@@ -16,6 +16,7 @@ nav {
   width: 90%;
   height: 40px;
   border-bottom: 1px solid rgb(209, 207, 207);
+  z-index: 3;
 }
 
 .navTab {
@@ -29,6 +30,7 @@ nav {
 .individualTab {
   color: rgb(146, 146, 146);
   position: relative;
+  text-decoration: none;
 }
 .individualTab::after {
   position: absolute;
@@ -129,51 +131,165 @@ nav {
   height: 700px;
   align-items: center;
   justify-content: center;
+  position: absolute;
   /* border: 1px solid red; */
-  background-color: rgba(105, 96, 96, 0.5);
+  /* background-color: rgba(105, 96, 96, 0.5); */
   box-shadow: inset 0px 0px 40px 10px rgb(255, 255, 255);
+}
+.system {
+  display: flex;
+  position: absolute;
+  width: 500px;
+  height: 700px;
+}
+.pins {
+  display: flex;
+  position: absolute;
+  width: 500px;
+  height: 700px;
+  justify-content: center;
+  align-items: center;
+  z-index: 3;
+}
+.Liver {
+  display: flex;
+  width: 20px;
+  height: 30px;
+  position: absolute;
+  z-index: 3;
+  /* border: 1px solid red; */
+  top: 190px;
+  left: 225px;
+}
+.Stomach {
+  display: flex;
+  width: 20px;
+  height: 30px;
+  position: absolute;
+  z-index: 3;
+  /* border: 1px solid red; */
+  top: 200px;
+  left: 250px;
+}
+.Intestine {
+  display: flex;
+  width: 20px;
+  height: 30px;
+  position: absolute;
+  z-index: 3;
+  /* border: 1px solid red; */
+  top: 250px;
+}
+.Bones {
+  display: flex;
+  width: 20px;
+  height: 30px;
+  position: absolute;
+  z-index: 3;
+  /* border: 1px solid red; */
+  top: 200px;
+}
+.Lungs {
+  display: flex;
+  width: 20px;
+  height: 30px;
+  position: absolute;
+  z-index: 3;
+  /* border: 1px solid red; */
+  top: 150px;
+  left: 210px;
+}
+.Heart {
+  display: flex;
+  width: 20px;
+  height: 30px;
+  position: absolute;
+  z-index: 3;
+  /* border: 1px solid red; */
+  top: 160px;
+  left: 240px;
+}
+.Brain {
+  display: flex;
+  width: 20px;
+  height: 30px;
+  position: absolute;
+  z-index: 3;
+  /* border: 1px solid red; */
+  top: 30px;
 }
 .skin {
   display: flex;
   width: 500px;
   height: 700px;
-  animation-name: appear;
-  animation-duration: 0.9s;
+  position: absolute;
+  /* animation-name: appear;
+  animation-duration: 0.9s; */
 }
+
 .skeletal {
   display: flex;
   width: 500px;
   height: 700px;
-  animation-name: appear;
-  animation-duration: 0.9s;
+  position: absolute;
+  /* animation-name: appear;
+  animation-duration: 0.9s; */
 }
 .digestive {
   display: flex;
   width: 500px;
   height: 700px;
-  animation-name: appear;
-  animation-duration: 0.9s;
+  position: absolute;
+  /* animation-name: appear;
+  animation-duration: 0.9s; */
 }
 .respiratory {
   display: flex;
   width: 500px;
   height: 700px;
-  animation-name: appear;
-  animation-duration: 0.9s;
+  position: absolute;
+  /* animation-name: appear;
+  animation-duration: 0.9s; */
 }
 .cardiovascular {
   display: flex;
   width: 500px;
   height: 700px;
-  animation-name: appear;
-  animation-duration: 0.9s;
+  position: absolute;
+  /* animation-name: appear;
+  animation-duration: 0.9s; */
 }
 .nervous {
   display: flex;
   width: 500px;
   height: 700px;
-  animation-name: appear;
-  animation-duration: 0.9s;
+  position: absolute;
+  /* animation-name: appear;
+  animation-duration: 0.9s; */
+}
+
+.foodContainer {
+  display: flex;
+  position: absolute;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  right: 60px;
+  height: 700px;
+  width: 400px;
+  border: 1px solid red;
+}
+.organDetails {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  font-size: 18px;
+  width: 350px;
+  height: 400px;
+  border: 1px solid red;
 }
 
 @keyframes appear {
