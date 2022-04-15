@@ -9,7 +9,7 @@ import OrganData from "./OrganData.js";
 import FoodData from "./FoodData.js"
 import Pin from "./Pin";
 import Nav from "./components/Nav.js"
-import api from "./apiConfig";
+import api from "./services/apiConfig.js";
 
 function App() {
   const [data, setData] = useState([]);
