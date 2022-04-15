@@ -9,10 +9,10 @@ function OrganData(prop) {
         <br />
         <span>Description:</span> {prop.description}
         <br />
-        <span>Symptoms:</span> {prop.symptom}
+        <span>Diagnoses:</span> {prop.symptom}
         <br />
         <form>
-          <span> New Symptoms:</span>
+          <span> New Diagnoses: </span>
           <input type="string"></input>
           <button submit="">Submit</button>
         </form>
