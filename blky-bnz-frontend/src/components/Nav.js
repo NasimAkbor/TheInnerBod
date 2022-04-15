@@ -1,12 +1,17 @@
 import React from "react";
-import { Link } from 'react-router-dom';
+import { Link } from "react-router-dom";
 
-function Nav() {
+function Nav(prop) {
   return (
     <nav>
       <div class="navTab">
-        <Link class="individualTab" to="/">
+        <Link class="individualTab" onClick={prop.click} to="/">
           Home
+        </Link>
+      </div>
+      <div class="navTab">
+        <Link class="individualTab" to="/skin">
+          skin
         </Link>
       </div>
       <div class="navTab">
@@ -35,7 +40,7 @@ function Nav() {
         </Link>
       </div>
     </nav>
-  )
+  );
 }
 
-export default Nav
+export default Nav;
