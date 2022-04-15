@@ -332,6 +332,7 @@ nav {
   color: grey;
   animation-name: appear;
   animation-duration: 0.9s;
+  word-spacing: 3px;
 }
 
 span {
