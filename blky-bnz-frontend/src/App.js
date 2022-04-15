@@ -1,17 +1,19 @@
 import logo from "./logo.svg";
 import "./App.css";
 import { Fragment, useEffect, useState } from "react";
-import Organ from "./organ";
+import Organ from "./organ.js";
 import TestSubject from "./TestSubject";
 import SystemType from "./systemType.js";
 import { Routes, Switch, Route, Link } from "react-router-dom";
-import OrganData from "./OrganData";
+import OrganData from "./OrganData.js";
+import FoodData from "./FoodData.js"
 import Pin from "./Pin";
 import Nav from "./components/Nav.js"
+import api from "./apiConfig";
 
 function App() {
   const [data, setData] = useState([]);
-  const [food, setFood] = useState("none");
+  const [food, setFood] = useState([]);
   const [system, setSystem] = useState("skin");
   const [organ, setOrgan] = useState([]);
   const [detail, setDetail] = useState("Liver");
@@ -26,7 +28,12 @@ function App() {
       .then((response) => response.json())
       .then((data) => setOrgan(data));
   }, []);
-  console.log(organ);
+
+  useEffect(() => {
+    fetch("https://organ-api.herokuapp.com/organ-api/foods")
+      .then((res) => res.json())
+      .then((deeta) => setFood(deeta));
+  }, []);
 
   return (
     <div className="App">
@@ -215,6 +222,14 @@ function App() {
                     system={data.system}
                     symptom={data.symptom}
                     description={data.description}
+                  />
+                )
+            )}
+            {food.map(
+              (data) =>
+                data.name.includes(detail) && (
+                  <FoodData
+                    food={data.food.join(', ')}
                   />
                 )
             )}
