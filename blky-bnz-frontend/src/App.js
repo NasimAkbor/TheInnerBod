@@ -7,6 +7,7 @@ import SystemType from "./systemType.js";
 import { Routes, Switch, Route, Link } from "react-router-dom";
 import OrganData from "./OrganData";
 import Pin from "./Pin";
+import Nav from "./components/Nav.js"
 
 function App() {
   const [data, setData] = useState([]);
@@ -30,39 +31,7 @@ function App() {
   return (
     <div className="App">
       <div className="mainContainer">
-        <nav>
-          <div class="navTab">
-            <Link class="individualTab" to="/">
-              Home
-            </Link>
-          </div>
-          <div class="navTab">
-            <Link class="individualTab" to="/skeletal">
-              skeletal
-            </Link>
-          </div>
-          <div class="navTab">
-            <Link class="individualTab" to="/digestive">
-              digestive
-            </Link>
-          </div>
-          <div class="navTab">
-            <Link class="individualTab" to="/respiratory">
-              respiratory
-            </Link>
-          </div>
-          <div class="navTab">
-            <Link class="individualTab" to="/cardiovascular">
-              cardiovascular
-            </Link>
-          </div>
-          <div class="navTab">
-            <Link class="individualTab" to="/nervous">
-              nervous
-            </Link>
-          </div>
-        </nav>
-
+        <Nav />
         <div className="bodyContainer">
           <TestSubject />
         </div>
