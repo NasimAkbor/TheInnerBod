@@ -6,9 +6,9 @@ import TestSubject from "./TestSubject";
 import SystemType from "./systemType.js";
 import { Routes, Switch, Route, Link } from "react-router-dom";
 import OrganData from "./OrganData.js";
-import FoodData from "./FoodData.js"
+import FoodData from "./FoodData.js";
 import Pin from "./Pin";
-import Nav from "./components/Nav.js"
+import Nav from "./components/Nav.js";
 import api from "./services/apiConfig.js";
 
 function App() {
@@ -16,11 +16,14 @@ function App() {
   const [food, setFood] = useState([]);
   const [system, setSystem] = useState("skin");
   const [organ, setOrgan] = useState([]);
-  const [detail, setDetail] = useState("Liver");
+  const [detail, setDetail] = useState("none");
 
   const organChange = (e) => {
     console.log(e.target.dataset.key);
     setDetail(e.target.dataset.key);
+  };
+  const clearData = () => {
+    setDetail("none");
   };
 
   useEffect(() => {
@@ -38,15 +41,16 @@ function App() {
   return (
     <div className="App">
       <div className="mainContainer">
-        <Nav />
+        <Nav click={clearData} />
         <div className="bodyContainer">
           <TestSubject />
         </div>
         <div className="bigContainer">
           <div className="anatomy">
             <Routes>
+              <Route path="/" element={<div>Home Page</div>}></Route>
               <Route
-                path="/"
+                path="/skin"
                 element={
                   <Fragment>
                     <div class="system">
@@ -228,9 +232,7 @@ function App() {
             {food.map(
               (data) =>
                 data.name.includes(detail) && (
-                  <FoodData
-                    food={data.food.join(', ')}
-                  />
+                  <FoodData food={data.food.join(", ")} />
                 )
             )}
           </div>
