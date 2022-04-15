@@ -8,6 +8,7 @@
   font-family: "Bebas Neue", cursive;
   font-size: 20px;
 }
+
 nav {
   display: flex;
   top: 0;
@@ -24,14 +25,17 @@ nav {
   width: 100%;
   justify-content: space-evenly;
 }
+
 .navTab:hover {
   cursor: pointer;
 }
+
 .individualTab {
   color: rgb(146, 146, 146);
   position: relative;
   text-decoration: none;
 }
+
 .individualTab::after {
   position: absolute;
   content: "";
@@ -42,10 +46,12 @@ nav {
   bottom: -10px;
   transition: all 0.4s ease-in-out;
 }
+
 .navTab:hover .individualTab::after {
   width: 100%;
   left: 0;
 }
+
 .bigContainer {
   display: flex;
   width: 100%;
@@ -54,6 +60,7 @@ nav {
   align-items: center;
   border: 1px solid red;
 }
+
 /*Test Tube*/
 .bodyContainer {
   display: flex;
@@ -65,6 +72,7 @@ nav {
   left: 0;
   /* border: 1px solid red; */
 }
+
 .testTube {
   display: flex;
   justify-content: center;
@@ -73,11 +81,13 @@ nav {
   height: 500px;
   /* border: 1px solid red; */
 }
+
 .testSubject {
   display: flex;
   height: 430px;
   width: fit-content;
 }
+
 .person {
   display: flex;
   width: 100%;
@@ -96,6 +106,7 @@ nav {
   /* box-shadow: inset 0px 0px 30px 12px white; */
   box-shadow: 20px 20px 60px #d9d9d9, -20px -20px 60px #ffffff;
 }
+
 .light {
   display: flex;
   justify-content: center;
@@ -116,9 +127,11 @@ nav {
   0% {
     transform: translate(0, 10px);
   }
+
   50% {
     transform: translate(0, 400px);
   }
+
   100% {
     transform: translate(0, 10px);
   }
@@ -136,12 +149,14 @@ nav {
   /* background-color: rgba(105, 96, 96, 0.5); */
   box-shadow: inset 0px 0px 40px 10px rgb(255, 255, 255);
 }
+
 .system {
   display: flex;
   position: absolute;
   width: 500px;
   height: 700px;
 }
+
 .pins {
   display: flex;
   position: absolute;
@@ -151,6 +166,18 @@ nav {
   align-items: center;
   z-index: 3;
 }
+
+.Liver:hover,
+.Stomach:hover,
+.Intestine:hover,
+.Intestine:hover,
+.Bones:hover,
+.Lungs:hover,
+.Heart:hover,
+.Brain:hover {
+  cursor: pointer;
+}
+
 .Liver {
   display: flex;
   width: 20px;
@@ -161,6 +188,7 @@ nav {
   top: 190px;
   left: 225px;
 }
+
 .Stomach {
   display: flex;
   width: 20px;
@@ -171,6 +199,7 @@ nav {
   top: 200px;
   left: 250px;
 }
+
 .Intestine {
   display: flex;
   width: 20px;
@@ -180,6 +209,7 @@ nav {
   /* border: 1px solid red; */
   top: 250px;
 }
+
 .Bones {
   display: flex;
   width: 20px;
@@ -189,6 +219,7 @@ nav {
   /* border: 1px solid red; */
   top: 200px;
 }
+
 .Lungs {
   display: flex;
   width: 20px;
@@ -199,6 +230,7 @@ nav {
   top: 150px;
   left: 210px;
 }
+
 .Heart {
   display: flex;
   width: 20px;
@@ -209,6 +241,7 @@ nav {
   top: 160px;
   left: 240px;
 }
+
 .Brain {
   display: flex;
   width: 20px;
@@ -218,6 +251,7 @@ nav {
   /* border: 1px solid red; */
   top: 30px;
 }
+
 .skin {
   display: flex;
   width: 500px;
@@ -235,6 +269,7 @@ nav {
   /* animation-name: appear;
   animation-duration: 0.9s; */
 }
+
 .digestive {
   display: flex;
   width: 500px;
@@ -243,6 +278,7 @@ nav {
   /* animation-name: appear;
   animation-duration: 0.9s; */
 }
+
 .respiratory {
   display: flex;
   width: 500px;
@@ -251,6 +287,7 @@ nav {
   /* animation-name: appear;
   animation-duration: 0.9s; */
 }
+
 .cardiovascular {
   display: flex;
   width: 500px;
@@ -259,6 +296,7 @@ nav {
   /* animation-name: appear;
   animation-duration: 0.9s; */
 }
+
 .nervous {
   display: flex;
   width: 500px;
@@ -279,6 +317,7 @@ nav {
   width: 400px;
   /* border: 1px solid red; */
 }
+
 .organDetails {
   display: flex;
   flex-direction: column;
@@ -292,13 +331,16 @@ nav {
   /* border: 1px solid red; */
   color: grey;
 }
+
 span {
   color: black;
 }
+
 @keyframes appear {
   from {
     opacity: 0;
   }
+
   to {
     opacity: 1;
   }

@@ -1,4 +1,4 @@
-import Skin from "./skin_system.jpeg";
+import Skin from "./Images/skin_system.jpeg";
 function TestSubject() {
   return (
     <div className="testTube">

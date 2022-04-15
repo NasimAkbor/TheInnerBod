@@ -110,7 +110,6 @@ function App() {
                       )}{" "}
                     </div>
                     <div class="pins">
-                      CENSORED
                       {organ.map(
                         (data) =>
                           data.system.includes("skeletal") && (
@@ -139,7 +138,6 @@ function App() {
                       )}{" "}
                     </div>
                     <div class="pins">
-                      CENSORED
                       {organ.map(
                         (data) =>
                           data.system.includes("digestive") && (
@@ -168,7 +166,6 @@ function App() {
                       )}
                     </div>
                     <div class="pins">
-                      CENSORED
                       {organ.map(
                         (data) =>
                           data.system.includes("respiratory") && (
@@ -196,7 +193,6 @@ function App() {
                       )}{" "}
                     </div>
                     <div class="pins">
-                      CENSORED
                       {organ.map(
                         (data) =>
                           data.system.includes("cardiovascular") && (
@@ -225,7 +221,6 @@ function App() {
                       )}{" "}
                     </div>
                     <div class="pins">
-                      CENSORED
                       {organ.map(
                         (data) =>
                           data.system.includes("nervous") && (
