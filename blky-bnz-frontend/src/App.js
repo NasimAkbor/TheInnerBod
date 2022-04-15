@@ -82,7 +82,6 @@ function App() {
                       )}{" "}
                     </div>
                     <div class="pins">
-                      CENSORED
                       {organ.map(
                         (data) =>
                           data.system.includes("skin") && (
