@@ -13,6 +13,7 @@ import api from "./services/apiConfig.js";
 import System from "./components/System.js";
 import Organs from "./components/Organs.js";
 import FoodContainer from "./components/FoodContainer";
+import Home from "./components/Home";
 
 function App() {
   const [data, setData] = useState([]);
@@ -41,66 +42,116 @@ function App() {
     <div className="App">
       <div className="mainContainer">
         <Nav click={clearData} />
-        <div className="bodyContainer">
+        {/* <div className="bodyContainer">
           <TestSubject />
-        </div>
+        </div> */}
         <div className="bigContainer">
           <div className="anatomy">
             <Routes>
-              <Route path="/" element={<div>Home Page</div>}></Route>
-              <Route path="/skin" element={
-                <Fragment>
-                  <System type={"skin"} />
-                  <Organs type={"skin"} value={organ} setDetail={setDetail} />
-                </Fragment>
-              }
+              <Route path="/" element={<Home />}></Route>
+              <Route
+                path="/sensory"
+                element={
+                  <Fragment>
+                    <div className="bodyContainer">
+                      <TestSubject />
+                    </div>
+                    <System type={"sensory"} />
+                    <Organs
+                      type={"sensory"}
+                      value={organ}
+                      setDetail={setDetail}
+                    />
+                  </Fragment>
+                }
               ></Route>
 
-              <Route path="/skeletal" element={
-                <Fragment>
-                  <System type={"skeletal"} />
-                  <Organs type={"skeletal"} value={organ} setDetail={setDetail} />
-                </Fragment>
-              }
+              <Route
+                path="/skeletal"
+                element={
+                  <Fragment>
+                    <div className="bodyContainer">
+                      <TestSubject />
+                    </div>
+                    <System type={"skeletal"} />
+                    <Organs
+                      type={"skeletal"}
+                      value={organ}
+                      setDetail={setDetail}
+                    />
+                  </Fragment>
+                }
               ></Route>
 
-              <Route path="/digestive" element={
-                <Fragment>
-                  <System type={"digestive"} />
-                  <Organs type={"digestive"} value={organ} setDetail={setDetail} />
-                </Fragment>
-              }
+              <Route
+                path="/digestive"
+                element={
+                  <Fragment>
+                    <div className="bodyContainer">
+                      <TestSubject />
+                    </div>
+                    <System type={"digestive"} />
+                    <Organs
+                      type={"digestive"}
+                      value={organ}
+                      setDetail={setDetail}
+                    />
+                  </Fragment>
+                }
               ></Route>
 
-              <Route path="/respiratory" element={
-                <Fragment>
-                  <System type={"respiratory"} />
-                  <Organs type={"respiratory"} value={organ} setDetail={setDetail} />
-                </Fragment>
-              }
+              <Route
+                path="/respiratory"
+                element={
+                  <Fragment>
+                    <div className="bodyContainer">
+                      <TestSubject />
+                    </div>
+                    <System type={"respiratory"} />
+                    <Organs
+                      type={"respiratory"}
+                      value={organ}
+                      setDetail={setDetail}
+                    />
+                  </Fragment>
+                }
               ></Route>
-              <Route path="/cardiovascular" element={
-                <Fragment>
-                  <System type={"cardiovascular"} />
-                  <Organs type={"cardiovascular"} value={organ} setDetail={setDetail} />
-                </Fragment>
-              }
+              <Route
+                path="/cardiovascular"
+                element={
+                  <Fragment>
+                    <div className="bodyContainer">
+                      <TestSubject />
+                    </div>
+                    <System type={"cardiovascular"} />
+                    <Organs
+                      type={"cardiovascular"}
+                      value={organ}
+                      setDetail={setDetail}
+                    />
+                  </Fragment>
+                }
               ></Route>
 
-              <Route path="/nervous" element={
-                <Fragment>
-                  <System type={"nervous"} />
-                  <Organs type={"nervous"} value={organ} setDetail={setDetail} />
-                </Fragment>
-              }
+              <Route
+                path="/nervous"
+                element={
+                  <Fragment>
+                    <div className="bodyContainer">
+                      <TestSubject />
+                    </div>
+                    <System type={"nervous"} />
+                    <Organs
+                      type={"nervous"}
+                      value={organ}
+                      setDetail={setDetail}
+                    />
+                  </Fragment>
+                }
               ></Route>
             </Routes>
           </div>
-          <FoodContainer
-            value={organ}
-            otherValue={food}
-            detail={detail}
-          />
+          <FoodContainer value={organ} otherValue={food} detail={detail} />
         </div>
       </div>
     </div>

@@ -7,7 +7,7 @@ import Nervous from "./Images/nervous_system.jpeg";
 
 const SystemType = [
   {
-    system: "skin",
+    system: "sensory",
     img: Skin,
   },
   {
