@@ -10,32 +10,32 @@ function Nav(prop) {
         </Link>
       </div>
       <div class="navTab">
-        <Link class="individualTab" to="/sensory">
+        <Link class="individualTab" onClick={prop.click} to="/sensory">
           sensory
         </Link>
       </div>
       <div class="navTab">
-        <Link class="individualTab" to="/skeletal">
+        <Link class="individualTab" onClick={prop.click} to="/skeletal">
           skeletal
         </Link>
       </div>
       <div class="navTab">
-        <Link class="individualTab" to="/digestive">
+        <Link class="individualTab" onClick={prop.click} to="/digestive">
           digestive
         </Link>
       </div>
       <div class="navTab">
-        <Link class="individualTab" to="/respiratory">
+        <Link class="individualTab" onClick={prop.click} to="/respiratory">
           respiratory
         </Link>
       </div>
       <div class="navTab">
-        <Link class="individualTab" to="/cardiovascular">
+        <Link class="individualTab" onClick={prop.click} to="/cardiovascular">
           cardiovascular
         </Link>
       </div>
       <div class="navTab">
-        <Link class="individualTab" to="/nervous">
+        <Link class="individualTab" onClick={prop.click} to="/nervous">
           nervous
         </Link>
       </div>
