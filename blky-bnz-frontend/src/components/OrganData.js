@@ -1,20 +1,17 @@
 import { useState } from "react";
-import { updateOrgan } from "./services/reqfunctions.js";
+import { updateOrgan } from "../services/reqfunctions.js";
 
 function OrganData(prop) {
 
   const [diag, setDiag] = useState('');
-  const [newInfo, setnewInfo] = useState(' ' + '');
-  const [name, setName] = useState('');
+  const [id, setId] = useState(prop.id);
 
   const handleSubmit = async (event) => {
-    let id = prop._id
-    let info = diag;
+    let info = { "symptom": `${diag}` };
+    console.log(id);
     event.preventDefault();
     await updateOrgan(id, info)
-    setnewInfo(diag);
     setDiag('');
-
   }
 
   return (
@@ -27,11 +24,12 @@ function OrganData(prop) {
         <br />
         <span>Description:</span> {prop.description}
         <br />
-        <span>Diagnoses:</span> {prop.symptom + newInfo}
+        <span>Diagnoses:</span> {prop.symptom}
         <br />
         <form onSubmit={handleSubmit}>
           <span> New Diagnoses: </span>
           <input type="string"
+            name="organ"
             value={diag}
             onChange={(e) => setDiag(e.target.value)}></input>
           <button submit="">Submit</button>

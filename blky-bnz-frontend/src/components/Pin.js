@@ -1,4 +1,4 @@
-import Ping from "./Images/ping.png";
+import Ping from "../Images/ping.png";
 
 function Pin(prop) {
   return (

@@ -1,17 +1,15 @@
-import { useEffect, useState } from "react";
-import { updateFood } from "./services/reqfunctions.js";
+import { useState } from "react";
+import { updateFood } from "../services/reqfunctions.js";
 
 function FoodData(prop) {
 
   const [diag, setDiag] = useState('');
-  const [newInfo, setnewInfo] = useState(' ' + '');
   const [organ, setOrgan] = useState(prop.name);
 
   const handleSubmit = async (event) => {
     let info = { "food": `${diag}` };
     event.preventDefault();
     await updateFood(organ, info)
-    setnewInfo(diag);
     setDiag('');
   }
 
