@@ -10,8 +10,8 @@ function Nav(prop) {
         </Link>
       </div>
       <div class="navTab">
-        <Link class="individualTab" to="/skin">
-          skin
+        <Link class="individualTab" to="/sensory">
+          sensory
         </Link>
       </div>
       <div class="navTab">
