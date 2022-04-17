@@ -17,7 +17,8 @@ nav {
   width: 90%;
   height: 40px;
   border-bottom: 1px solid rgb(209, 207, 207);
-  z-index: 3;
+  z-index: 5;
+  background-color: white;
 }
 
 .navTab {
@@ -58,7 +59,7 @@ nav {
   height: 100vh;
   justify-content: center;
   align-items: center;
-  border: 1px solid red;
+  /* border: 1px solid red; */
 }
 
 /*Test Tube*/
@@ -397,8 +398,8 @@ span {
 
 @media only screen and (max-width: 600px) {
   .mainContainer {
-    width: 100%;
-    height: 800px;
+    width: 600px;
+    /* height: 800px; */
     flex-direction: column;
   }
   .bodyContainer {
@@ -409,11 +410,17 @@ span {
   }
   .system {
     display: flex;
-    /* position: relative; */
+    position: absolute;
+    /* width: 400px; */
+  }
+  .pins {
+    display: flex;
+    position: absolute;
+    /* width: 400px; */
   }
   .foodContainer {
-    width: 100%;
-    position: relative;
+    width: 90%;
+    position: absolute;
     justify-content: flex-end;
     align-content: center;
     height: 100%;
@@ -426,7 +433,7 @@ span {
     position: absolute;
     align-items: center;
     justify-self: center;
-    width: 600px;
+    width: 90%;
     height: 40px;
     border-bottom: 1px solid rgb(209, 207, 207);
     z-index: 3;
@@ -434,7 +441,7 @@ span {
   }
   .navTab {
     display: flex;
-    width: 500px;
+    width: 400px;
     justify-content: space-evenly;
     align-items: center;
     flex-direction: row;
@@ -444,9 +451,68 @@ span {
   .organDetails,
   .foodDetails {
     height: fit-content;
-    width: 90%;
+    width: 100%;
     background-color: rgba(129, 128, 128, 0.651);
     color: white;
     padding: 5px;
   }
 }
+
+/* @media only screen and (max-width: 400px) {
+  .mainContainer {
+    width: 100%;
+    height: 800px;
+    flex-direction: column;
+  }
+  .bodyContainer {
+    display: none;
+  }
+  .anatomy {
+    width: 100%;
+    position: absolute;
+  }
+  .system {
+    display: flex;
+    position: absolute;
+    border: 1px solid red;
+  }
+  .foodContainer {
+    width: 400px;
+    position: absolute;
+    justify-content: center;
+    align-content: center;
+    height: 100%;
+    border: 1px solid red;
+    gap: 10px;
+  }
+  nav {
+    display: flex;
+
+    position: absolute;
+    align-items: center;
+    justify-self: center;
+    width: 400px;
+    height: 40px;
+    border-bottom: 1px solid rgb(209, 207, 207);
+    z-index: 3;
+    font-size: 15px;
+    border: 1px solid red;
+  }
+  .navTab {
+    display: flex;
+    width: 400px;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .organDetails,
+  .foodDetails {
+    height: fit-content;
+    width: 80%;
+    background-color: rgba(129, 128, 128, 0.651);
+    color: white;
+    padding: 5px;
+  }
+} */
