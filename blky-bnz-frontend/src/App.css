@@ -149,6 +149,7 @@ nav {
   justify-content: center;
   position: absolute;
   box-shadow: inset 0px 0px 40px 10px rgb(255, 255, 255);
+  animation: slide-up 1s;
 }
 
 .system {
@@ -361,12 +362,8 @@ nav {
   /* border: 1px solid red; */
   color: grey;
   animation-name: appear;
-  animation-duration: 0.9s;
+  animation-duration: 1s;
   word-spacing: 3px;
-}
-
-span {
-  color: black;
 }
 
 @keyframes appear {
@@ -376,6 +373,16 @@ span {
 
   to {
     opacity: 1;
+  }
+}
+
+@keyframes slideRight {
+  from {
+    margin-left: 100%;
+  }
+
+  to {
+    margin-left: 0;
   }
 }
 
@@ -392,13 +399,97 @@ span {
   /* border: 1px solid red; */
   color: grey;
   animation-name: appear;
-  animation-duration: 0.9s;
+  animation-duration: 1s;
   word-spacing: 3px;
 }
 
+/*Home*/
+.home {
+  display: flex;
+  width: fit-content;
+  height: 80vh;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-image: url("./Images/WallPaper.jpeg");
+  background-size: cover;
+  background-position: center;
+  opacity: 0.8;
+}
+
+.titleWrap {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+}
+
+.title h1 {
+  overflow: hidden;
+  width: 100%;
+  white-space: nowrap;
+  border-right: 4px solid grey;
+  margin: 0 auto;
+  color: white;
+  animation: typing 3s steps(500, end), blink-caret 0.9s step-end infinite;
+  z-index: 3;
+  flex-direction: row;
+  background-color: rgba(110, 110, 110, 0.7);
+  padding: 5px;
+  align-self: flex-start;
+  justify-self: flex-start;
+  opacity: 1;
+}
+
+span {
+  color: rgb(245, 190, 38);
+  opacity: 1;
+}
+
+.homeCover {
+  display: flex;
+  width: 100%;
+  height: 90%;
+  /* filter: sepia(0.5) grayscale(1); */
+  position: absolute;
+  opacity: 0.8;
+  z-index: -1;
+}
+@keyframes slide-up {
+  from {
+    margin-top: 100%;
+  }
+  to {
+    margin-top: 0%;
+  }
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+@keyframes blink-caret {
+  from,
+  to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: rgb(255, 255, 255);
+  }
+}
+
+/*Home*/
 @media only screen and (max-width: 600px) {
   .mainContainer {
-    width: 600px;
+    width: 100%;
     /* height: 800px; */
     flex-direction: column;
   }
@@ -419,7 +510,7 @@ span {
     /* width: 400px; */
   }
   .foodContainer {
-    width: 90%;
+    width: 100%;
     position: absolute;
     justify-content: flex-end;
     align-content: center;
@@ -436,7 +527,7 @@ span {
     width: 90%;
     height: 40px;
     border-bottom: 1px solid rgb(209, 207, 207);
-    z-index: 3;
+    z-index: 5;
     font-size: 15px;
   }
   .navTab {
@@ -451,7 +542,7 @@ span {
   .organDetails,
   .foodDetails {
     height: fit-content;
-    width: 100%;
+    width: 90%;
     background-color: rgba(129, 128, 128, 0.651);
     color: white;
     padding: 5px;
