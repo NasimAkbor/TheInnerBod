@@ -222,6 +222,8 @@ function App() {
               (data) =>
                 data.name.includes(detail) && (
                   <OrganData
+                    //images={data.images}
+                    id={data._id}
                     name={data.name}
                     system={data.system}
                     symptom={data.symptom}
@@ -232,7 +234,7 @@ function App() {
             {food.map(
               (data) =>
                 data.name.includes(detail) && (
-                  <FoodData food={data.food.join(", ")} />
+                  <FoodData name={data.name} food={data.food.join(", ")} />
                 )
             )}
           </div>
