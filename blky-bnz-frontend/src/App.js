@@ -5,11 +5,14 @@ import Organ from "./organ.js";
 import TestSubject from "./TestSubject";
 import SystemType from "./systemType.js";
 import { Routes, Switch, Route, Link } from "react-router-dom";
-import OrganData from "./OrganData.js";
-import FoodData from "./FoodData.js";
-import Pin from "./Pin";
+import OrganData from "./components/OrganData.js";
+import FoodData from "./components/FoodData.js";
+import Pin from "./components/Pin.js";
 import Nav from "./components/Nav.js";
 import api from "./services/apiConfig.js";
+import System from "./components/System.js";
+import Organs from "./components/Organs.js";
+import FoodContainer from "./components/FoodContainer";
 
 function App() {
   const [data, setData] = useState([]);
@@ -18,10 +21,6 @@ function App() {
   const [organ, setOrgan] = useState([]);
   const [detail, setDetail] = useState("none");
 
-  const organChange = (e) => {
-    console.log(e.target.dataset.key);
-    setDetail(e.target.dataset.key);
-  };
   const clearData = () => {
     setDetail("none");
   };
@@ -49,195 +48,59 @@ function App() {
           <div className="anatomy">
             <Routes>
               <Route path="/" element={<div>Home Page</div>}></Route>
-              <Route
-                path="/skin"
-                element={
-                  <Fragment>
-                    <div class="system">
-                      {SystemType.map(
-                        (data) =>
-                          data.system.includes("skin") && (
-                            <Organ image={data.img} name={data.system} />
-                          )
-                      )}{" "}
-                    </div>
-                    <div class="pins">
-                      {organ.map(
-                        (data) =>
-                          data.system.includes("skin") && (
-                            <Pin
-                              class={data.name}
-                              name={data.name}
-                              click={organChange}
-                            />
-                          )
-                      )}
-                    </div>
-                  </Fragment>
-                }
+              <Route path="/skin" element={
+                <Fragment>
+                  <System type={"skin"} />
+                  <Organs type={"skin"} value={organ} setDetail={setDetail} />
+                </Fragment>
+              }
               ></Route>
 
-              <Route
-                path="/skeletal"
-                element={
-                  <Fragment>
-                    <div class="system">
-                      {SystemType.map(
-                        (data) =>
-                          data.system.includes("skeletal") && (
-                            <Organ image={data.img} name={data.system} />
-                          )
-                      )}{" "}
-                    </div>
-                    <div class="pins">
-                      {organ.map(
-                        (data) =>
-                          data.system.includes("skeletal") && (
-                            <Pin
-                              class={data.name}
-                              name={data.name}
-                              click={organChange}
-                            />
-                          )
-                      )}
-                    </div>
-                  </Fragment>
-                }
+              <Route path="/skeletal" element={
+                <Fragment>
+                  <System type={"skeletal"} />
+                  <Organs type={"skeletal"} value={organ} setDetail={setDetail} />
+                </Fragment>
+              }
               ></Route>
 
-              <Route
-                path="/digestive"
-                element={
-                  <Fragment>
-                    <div class="system">
-                      {SystemType.map(
-                        (data) =>
-                          data.system.includes("digestive") && (
-                            <Organ image={data.img} name={data.system} />
-                          )
-                      )}{" "}
-                    </div>
-                    <div class="pins">
-                      {organ.map(
-                        (data) =>
-                          data.system.includes("digestive") && (
-                            <Pin
-                              class={data.name}
-                              name={data.name}
-                              click={organChange}
-                            />
-                          )
-                      )}
-                    </div>
-                  </Fragment>
-                }
+              <Route path="/digestive" element={
+                <Fragment>
+                  <System type={"digestive"} />
+                  <Organs type={"digestive"} value={organ} setDetail={setDetail} />
+                </Fragment>
+              }
               ></Route>
 
-              <Route
-                path="/respiratory"
-                element={
-                  <Fragment>
-                    <div class="system">
-                      {SystemType.map(
-                        (data) =>
-                          data.system.includes("respiratory") && (
-                            <Organ image={data.img} name={data.system} />
-                          )
-                      )}
-                    </div>
-                    <div class="pins">
-                      {organ.map(
-                        (data) =>
-                          data.system.includes("respiratory") && (
-                            <Pin
-                              class={data.name}
-                              name={data.name}
-                              click={organChange}
-                            />
-                          )
-                      )}
-                    </div>
-                  </Fragment>
-                }
+              <Route path="/respiratory" element={
+                <Fragment>
+                  <System type={"respiratory"} />
+                  <Organs type={"respiratory"} value={organ} setDetail={setDetail} />
+                </Fragment>
+              }
               ></Route>
-              <Route
-                path="/cardiovascular"
-                element={
-                  <Fragment>
-                    <div class="system">
-                      {SystemType.map(
-                        (data) =>
-                          data.system.includes("cardiovascular") && (
-                            <Organ image={data.img} name={data.system} />
-                          )
-                      )}{" "}
-                    </div>
-                    <div class="pins">
-                      {organ.map(
-                        (data) =>
-                          data.system.includes("cardiovascular") && (
-                            <Pin
-                              class={data.name}
-                              name={data.name}
-                              click={organChange}
-                            />
-                          )
-                      )}
-                    </div>
-                  </Fragment>
-                }
+              <Route path="/cardiovascular" element={
+                <Fragment>
+                  <System type={"cardiovascular"} />
+                  <Organs type={"cardiovascular"} value={organ} setDetail={setDetail} />
+                </Fragment>
+              }
               ></Route>
 
-              <Route
-                path="/nervous"
-                element={
-                  <Fragment>
-                    <div class="system">
-                      {SystemType.map(
-                        (data) =>
-                          data.system.includes("nervous") && (
-                            <Organ image={data.img} name={data.system} />
-                          )
-                      )}{" "}
-                    </div>
-                    <div class="pins">
-                      {organ.map(
-                        (data) =>
-                          data.system.includes("nervous") && (
-                            <Pin
-                              class={data.name}
-                              name={data.name}
-                              click={organChange}
-                            />
-                          )
-                      )}
-                    </div>
-                  </Fragment>
-                }
+              <Route path="/nervous" element={
+                <Fragment>
+                  <System type={"nervous"} />
+                  <Organs type={"nervous"} value={organ} setDetail={setDetail} />
+                </Fragment>
+              }
               ></Route>
             </Routes>
           </div>
-          <div className="foodContainer">
-            {organ.map(
-              (data) =>
-                data.name.includes(detail) && (
-                  <OrganData
-                    //images={data.images}
-                    id={data._id}
-                    name={data.name}
-                    system={data.system}
-                    symptom={data.symptom}
-                    description={data.description}
-                  />
-                )
-            )}
-            {food.map(
-              (data) =>
-                data.name.includes(detail) && (
-                  <FoodData name={data.name} food={data.food.join(", ")} />
-                )
-            )}
-          </div>
+          <FoodContainer
+            value={organ}
+            otherValue={food}
+            detail={detail}
+          />
         </div>
       </div>
     </div>

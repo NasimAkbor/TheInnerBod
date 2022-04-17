@@ -7,11 +7,9 @@ const apiUrls = {
   development: "http://localhost:9000/organ-api",
 };
 
-if (window.location.hostname === "localhost") {
-  apiUrl = apiUrls.development;
-} else {
-  apiUrl = apiUrls.production;
-}
+
+apiUrl = apiUrls.production;
+
 
 const api = axios.create({
   baseURL: apiUrl,
