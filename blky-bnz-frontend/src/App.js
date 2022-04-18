@@ -12,7 +12,7 @@ import { updateOrgan } from "./services/reqfunctions.js";
 
 function App() {
   const [food, setFood] = useState([]);
-  const [system, setSystem] = useState("skin");
+  const [subCheck, setSubCheck] = useState(false);
   const [organ, setOrgan] = useState([]);
   const [detail, setDetail] = useState("none");
   const [change, setChange] = useState("");
@@ -130,12 +130,8 @@ function App() {
               ></Route>
             </Routes>
           </div>
-          <FoodContainer
-            setChange={setChange}
-            value={organ}
-            otherValue={food}
-            detail={detail}
-          />
+          <FoodContainer value={organ} otherValue={food} detail={detail} setOrgan={setOrgan} />
+
         </div>
       </div>
     </div>
