@@ -11,9 +11,9 @@ function Home() {
   }, []);
 
   return (
-    <div class="home">
-      {/* <img className="homeCover" src={portrait}></img> */}
-      <Login />
+    <div className="home">
+      {/* <img NameName="homeCover" src={portrait}></img> */}
+      {/* <Login /> */}
       <div className="titleWrap">
         <div className="title">
           <h1>

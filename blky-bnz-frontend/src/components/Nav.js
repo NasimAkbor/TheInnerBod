@@ -4,38 +4,42 @@ import { Link } from "react-router-dom";
 function Nav(prop) {
   return (
     <nav>
-      <div class="navTab">
-        <Link class="individualTab" onClick={prop.click} to="/">
+      <div className="navTab">
+        <Link className="individualTab" onClick={prop.click} to="/">
           home
         </Link>
       </div>
-      <div class="navTab">
-        <Link class="individualTab" onClick={prop.click} to="/sensory">
+      <div className="navTab">
+        <Link className="individualTab" onClick={prop.click} to="/sensory">
           sensory
         </Link>
       </div>
-      <div class="navTab">
-        <Link class="individualTab" onClick={prop.click} to="/skeletal">
+      <div className="navTab">
+        <Link className="individualTab" onClick={prop.click} to="/skeletal">
           skeletal
         </Link>
       </div>
-      <div class="navTab">
-        <Link class="individualTab" onClick={prop.click} to="/digestive">
+      <div className="navTab">
+        <Link className="individualTab" onClick={prop.click} to="/digestive">
           digestive
         </Link>
       </div>
-      <div class="navTab">
-        <Link class="individualTab" onClick={prop.click} to="/respiratory">
+      <div className="navTab">
+        <Link className="individualTab" onClick={prop.click} to="/respiratory">
           respiratory
         </Link>
       </div>
-      <div class="navTab">
-        <Link class="individualTab" onClick={prop.click} to="/cardiovascular">
+      <div className="navTab">
+        <Link
+          className="individualTab"
+          onClick={prop.click}
+          to="/cardiovascular"
+        >
           cardiovascular
         </Link>
       </div>
-      <div class="navTab">
-        <Link class="individualTab" onClick={prop.click} to="/nervous">
+      <div className="navTab">
+        <Link className="individualTab" onClick={prop.click} to="/nervous">
           nervous
         </Link>
       </div>

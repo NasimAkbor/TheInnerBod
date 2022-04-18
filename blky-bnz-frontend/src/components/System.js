@@ -1,14 +1,14 @@
-import React from 'react';
+import React from "react";
 import SystemType from "../systemType.js";
 import Organ from "../organ.js";
 
 function System(props) {
   return (
-    <div class="system">
+    <div className="system">
       {SystemType.map(
-        (data) =>
+        (data, i) =>
           data.system.includes(props.type) && (
-            <Organ image={data.img} name={data.system} />
+            <Organ key={i} image={data.img} name={data.system} />
           )
       )}
     </div>

@@ -2,16 +2,15 @@ import { useEffect, useState } from "react";
 import { updateOrgan } from "../services/reqfunctions.js";
 
 function OrganData(props) {
-
   let { setOrgan } = props;
 
-  const [diag, setDiag] = useState('');
+  const [diag, setDiag] = useState("");
   const [id, setId] = useState(props.id);
-
 
   const handleSubmit = async (event) => {
     let info = { symptom: `${diag}` };
     console.log(id);
+
     event.preventDefault();
     await updateOrgan(id, info);
     setDiag("");
@@ -26,7 +25,7 @@ function OrganData(props) {
   return (
     <div className="organDetails">
       <img src={props.images} />
-      <p>
+      <div>
         <span>Name:</span> {props.name}
         <br />
         <span>System:</span> {props.system}
@@ -45,7 +44,7 @@ function OrganData(props) {
           ></input>
           <button submit="">Submit</button>
         </form>
-      </p>
+      </div>
     </div>
   );
 }
