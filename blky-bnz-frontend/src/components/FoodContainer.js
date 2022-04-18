@@ -3,6 +3,9 @@ import OrganData from './OrganData';
 import FoodData from './FoodData.js';
 
 function FoodContainer(props) {
+
+  let { setOrgan } = props;
+
   return (
     <div className="foodContainer">
       {props.value.map(
@@ -15,6 +18,7 @@ function FoodContainer(props) {
               system={data.system}
               symptom={data.symptom}
               description={data.description}
+              setOrgan={setOrgan}
             />
           )
       )}

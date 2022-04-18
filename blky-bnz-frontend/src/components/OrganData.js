@@ -1,10 +1,16 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { updateOrgan } from "../services/reqfunctions.js";
 
-function OrganData(prop) {
+
+function OrganData(props) {
+
+  let { setOrgan } = props;
+
+
 
   const [diag, setDiag] = useState('');
-  const [id, setId] = useState(prop.id);
+  const [id, setId] = useState(props.id);
+
 
   const handleSubmit = async (event) => {
     let info = { "symptom": `${diag}` };
@@ -14,17 +20,23 @@ function OrganData(prop) {
     setDiag('');
   }
 
+  useEffect(() => {
+    fetch("https://organ-api.herokuapp.com/organ-api/organs")
+      .then((response) => response.json())
+      .then((data) => setOrgan(data));
+  }, [handleSubmit]);
+
   return (
     <div className="organDetails">
-      <img src={prop.images} />
+      <img src={props.images} />
       <p>
-        <span>Name:</span> {prop.name}
+        <span>Name:</span> {props.name}
         <br />
-        <span>System:</span> {prop.system}
+        <span>System:</span> {props.system}
         <br />
-        <span>Description:</span> {prop.description}
+        <span>Description:</span> {props.description}
         <br />
-        <span>Diagnoses:</span> {prop.symptom}
+        <span>Diagnoses:</span> {props.symptom}
         <br />
         <form onSubmit={handleSubmit}>
           <span> New Diagnoses: </span>

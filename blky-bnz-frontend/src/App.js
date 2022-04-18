@@ -11,7 +11,7 @@ import Home from "./components/Home";
 
 function App() {
   const [food, setFood] = useState([]);
-  const [system, setSystem] = useState("skin");
+  const [subCheck, setSubCheck] = useState(false);
   const [organ, setOrgan] = useState([]);
   const [detail, setDetail] = useState("none");
 
@@ -117,7 +117,7 @@ function App() {
               ></Route>
             </Routes>
           </div>
-          <FoodContainer value={organ} otherValue={food} detail={detail} />
+          <FoodContainer value={organ} otherValue={food} detail={detail} setOrgan={setOrgan} />
         </div>
       </div>
     </div>
