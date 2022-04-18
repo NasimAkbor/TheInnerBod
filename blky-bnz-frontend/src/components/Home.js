@@ -15,7 +15,7 @@ function Home() {
       <div className="titleWrap">
         <div className="title">
           <h1>
-            <span>Health</span> is a state of body. <span>Welness</span> is a
+            <span>Health</span> is a state of body. <span>Wellness</span> is a
             state of being.
           </h1>
         </div>
