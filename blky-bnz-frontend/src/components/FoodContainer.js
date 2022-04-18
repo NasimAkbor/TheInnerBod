@@ -16,7 +16,7 @@ function FoodContainer(props) {
               id={data._id}
               name={data.name}
               system={data.system}
-              symptom={data.symptom}
+              symptom={data.symptom.join(", ")}
               description={data.description}
               setOrgan={setOrgan}
             />
