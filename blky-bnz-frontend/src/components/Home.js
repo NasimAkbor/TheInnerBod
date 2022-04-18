@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import portrait from "../Images/WallPaper.jpeg";
+import Login from "./Login.js";
 
 function Home() {
   const text = ["Hello ", "goodBye ", "take care "];
@@ -12,6 +13,7 @@ function Home() {
   return (
     <div class="home">
       {/* <img className="homeCover" src={portrait}></img> */}
+      <Login />
       <div className="titleWrap">
         <div className="title">
           <h1>
