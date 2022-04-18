@@ -8,7 +8,6 @@ import System from "./components/System.js";
 import Organs from "./components/Organs.js";
 import FoodContainer from "./components/FoodContainer";
 import Home from "./components/Home";
-import { updateOrgan } from "./services/reqfunctions.js";
 
 function App() {
   const [food, setFood] = useState([]);
@@ -130,8 +129,12 @@ function App() {
               ></Route>
             </Routes>
           </div>
-          <FoodContainer value={organ} otherValue={food} detail={detail} setOrgan={setOrgan} />
-
+          <FoodContainer
+            value={organ}
+            otherValue={food}
+            detail={detail}
+            setOrgan={setOrgan}
+          />
         </div>
       </div>
     </div>

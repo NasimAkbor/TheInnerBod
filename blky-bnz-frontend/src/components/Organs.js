@@ -1,8 +1,7 @@
-import React from 'react';
-import Pin from './Pin.js';
+import React from "react";
+import Pin from "./Pin.js";
 
 function Organs(props) {
-
   let { setDetail } = props;
 
   function organChange(e) {
@@ -10,18 +9,18 @@ function Organs(props) {
     setDetail(e.target.dataset.key);
   }
 
-
   return (
-    <div class="pins">
+    <div className="pins">
       {props.value.map(
-        (data) =>
+        (data, i) =>
           data.system.includes(props.type) && (
             <Pin
+              key={i}
               class={data.name}
               name={data.name}
               click={organChange}
             />
-          ),
+          )
       )}
     </div>
   );

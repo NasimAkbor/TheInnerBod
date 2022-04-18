@@ -1,17 +1,17 @@
-import React from 'react';
-import OrganData from './OrganData';
-import FoodData from './FoodData.js';
+import React from "react";
+import OrganData from "./OrganData";
+import FoodData from "./FoodData.js";
 
 function FoodContainer(props) {
-
   let { setOrgan } = props;
 
   return (
     <div className="foodContainer">
       {props.value.map(
-        (data) =>
+        (data, i) =>
           data.name.includes(props.detail) && (
             <OrganData
+              key={i}
               //images={data.images}
               id={data._id}
               name={data.name}
@@ -23,9 +23,9 @@ function FoodContainer(props) {
           )
       )}
       {props.otherValue.map(
-        (data) =>
+        (data, i) =>
           data.name.includes(props.detail) && (
-            <FoodData name={data.name} food={data.food.join(", ")} />
+            <FoodData key={i} name={data.name} food={data.food.join(", ")} />
           )
       )}
     </div>
