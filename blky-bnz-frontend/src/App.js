@@ -24,7 +24,7 @@ function App() {
     fetch("https://organ-api.herokuapp.com/organ-api/organs")
       .then((response) => response.json())
       .then((data) => setOrgan(data));
-  }, [updateOrgan]);
+  }, []);
 
   useEffect(() => {
     fetch("https://organ-api.herokuapp.com/organ-api/foods")
