@@ -1,24 +1,21 @@
 import { useEffect, useState } from "react";
 import { updateOrgan } from "../services/reqfunctions.js";
 
-
 function OrganData(props) {
 
   let { setOrgan } = props;
-
-
 
   const [diag, setDiag] = useState('');
   const [id, setId] = useState(props.id);
 
 
   const handleSubmit = async (event) => {
-    let info = { "symptom": `${diag}` };
+    let info = { symptom: `${diag}` };
     console.log(id);
     event.preventDefault();
-    await updateOrgan(id, info)
-    setDiag('');
-  }
+    await updateOrgan(id, info);
+    setDiag("");
+  };
 
   useEffect(() => {
     fetch("https://organ-api.herokuapp.com/organ-api/organs")
@@ -40,10 +37,12 @@ function OrganData(props) {
         <br />
         <form onSubmit={handleSubmit}>
           <span> New Diagnoses: </span>
-          <input type="string"
+          <input
+            type="string"
             name="organ"
             value={diag}
-            onChange={(e) => setDiag(e.target.value)}></input>
+            onChange={(e) => setDiag(e.target.value)}
+          ></input>
           <button submit="">Submit</button>
         </form>
       </p>

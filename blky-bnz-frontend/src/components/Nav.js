@@ -6,7 +6,7 @@ function Nav(prop) {
     <nav>
       <div class="navTab">
         <Link class="individualTab" onClick={prop.click} to="/">
-          Home
+          home
         </Link>
       </div>
       <div class="navTab">
