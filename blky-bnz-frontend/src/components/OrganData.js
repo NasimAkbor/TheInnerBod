@@ -12,6 +12,12 @@ function OrganData(props) {
     setDiag("");
   };
 
+  useEffect(() => {
+    fetch("https://organ-api.herokuapp.com/organ-api/organs")
+      .then((response) => response.json())
+      .then((data) => props.setOrgan(data));
+  }, [handleSubmit]);
+
   return (
     <div className="organDetails">
       <img src={props.images} />
