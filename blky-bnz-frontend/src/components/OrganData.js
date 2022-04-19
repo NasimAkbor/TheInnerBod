@@ -14,7 +14,7 @@ function OrganData(props) {
 
   useEffect(() => {
     fetch("https://organ-api.herokuapp.com/organ-api/organs")
-      .then((response) => response.json())
+      .then((res) => res.json())
       .then((data) => props.setOrgan(data));
   }, [diag]);
 

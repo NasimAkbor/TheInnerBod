@@ -11,17 +11,15 @@ import Home from "./components/Home";
 
 function App() {
   const [food, setFood] = useState([]);
-  const [subCheck, setSubCheck] = useState(false);
   const [organ, setOrgan] = useState([]);
   const [detail, setDetail] = useState("none");
-  const [change, setChange] = useState("");
   const clearData = () => {
     setDetail("none");
   };
 
   useEffect(() => {
     fetch("https://organ-api.herokuapp.com/organ-api/organs")
-      .then((response) => response.json())
+      .then((res) => res.json())
       .then((data) => setOrgan(data));
   }, []);
 
