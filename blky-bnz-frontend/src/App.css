@@ -176,7 +176,7 @@ nav {
   justify-content: center;
   position: absolute;
   box-shadow: inset 0px 0px 40px 10px rgb(255, 255, 255);
-  animation: createBox 1s;
+  animation: createBox 2s;
 }
 
 .system {
@@ -419,6 +419,7 @@ nav {
   gap: 10px;
   justify-content: flex-start;
   align-items: flex-start;
+  flex-direction: row;
   flex-wrap: wrap;
   font-size: 18px;
   width: 350px;
@@ -436,15 +437,40 @@ nav {
   width: fit-content;
   height: 80vh;
   width: 100%;
-  justify-content: center;
-  align-items: center;
+  font-size: 100px;
+  justify-content: flex-start;
+  align-items: flex-start;
   flex-direction: column;
   background-image: url("./Images/WallPaper.jpeg");
   background-size: cover;
   background-position: center;
   opacity: 0.8;
 }
+.container {
+  display: inline-block;
+}
 
+.typed-out {
+  overflow: hidden;
+  border-right: 0.1em solid rgb(255, 0, 0);
+  white-space: nowrap;
+  height: fit-content;
+
+  animation: typing 3s steps(20, end) infinite,
+    blink-caret 0.7s step-end infinite;
+  /* animation-delay: -5s; */
+  font-size: 15rem;
+  width: 0;
+  color: white;
+}
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
 .titleWrap {
   display: flex;
   flex-direction: row;
@@ -453,28 +479,6 @@ nav {
   height: 100%;
   justify-content: center;
   align-items: center;
-}
-
-.title h1 {
-  overflow: hidden;
-  width: 100%;
-  white-space: nowrap;
-  border-right: 4px solid grey;
-  margin: 0 auto;
-  color: white;
-  animation: typing 3s steps(8000, end), blink-caret 0.9s step-end infinite;
-  z-index: 3;
-  flex-direction: row;
-  background-color: rgba(110, 110, 110, 0.5);
-  padding: 5px;
-  align-self: flex-start;
-  justify-self: flex-start;
-  opacity: 1;
-}
-h1 {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
 }
 
 span {
@@ -526,12 +530,15 @@ span {
     border-color: transparent;
   }
   50% {
-    border-color: rgb(255, 255, 255);
+    border-color: rgb(255, 0, 0);
   }
 }
 
 /*Home*/
 @media only screen and (max-width: 600px) {
+  .typed-out {
+    font-size: 8rem;
+  }
   .mainContainer {
     width: 100%;
     /* height: 800px; */

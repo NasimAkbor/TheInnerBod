@@ -3,22 +3,22 @@ import portrait from "../Images/WallPaper.jpeg";
 import Login from "./Login.js";
 
 function Home() {
-  const text = ["Hello ", "goodBye ", "take care "];
+  const text = ["Health ", "Wellness ", "Relaxation", "Nutrition"];
   const [word, setWord] = useState("");
 
+  let index = 0;
   useEffect(() => {
-    return setWord(text[1]);
+    const interval = setInterval(() => {
+      setWord(text[index++ % text.length]);
+    }, 3000);
+    return () => clearInterval(interval);
   }, []);
 
   return (
     <div className="home">
-      <div className="titleWrap">
-        <div className="title">
-          <h1>
-            <span>Health</span> is a state of body. <span>Wellness</span> is a
-            state of being.
-          </h1>
-        </div>
+      Life is about
+      <div className="container">
+        <div className="typed-out">{word}</div>
       </div>
     </div>
   );
