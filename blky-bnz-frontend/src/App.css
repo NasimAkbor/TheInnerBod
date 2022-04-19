@@ -370,7 +370,7 @@ nav {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  right: 0;
+  right: 3rem;
   height: 700px;
   width: 400px;
   /* border: 1px solid red; */
@@ -385,7 +385,7 @@ nav {
   flex-wrap: wrap;
   font-size: 18px;
   width: 350px;
-  height: 400px;
+  height: 300px;
   /* border: 1px solid red; */
   color: grey;
   animation-name: appear;
@@ -444,7 +444,7 @@ nav {
   background-image: url("./Images/WallPaper.jpeg");
   background-size: cover;
   background-position: center;
-  opacity: 0.8;
+  opacity: 0.85;
 }
 .container {
   display: inline-block;
@@ -452,7 +452,7 @@ nav {
 
 .typed-out {
   overflow: hidden;
-  border-right: 0.1em solid rgb(255, 0, 0);
+  border-right: 0.1em solid coral;
   white-space: nowrap;
   height: fit-content;
 
@@ -461,7 +461,7 @@ nav {
   /* animation-delay: -5s; */
   font-size: 15rem;
   width: 0;
-  color: white;
+  color: rgb(255, 255, 255);
 }
 @keyframes typing {
   from {
@@ -530,7 +530,7 @@ span {
     border-color: transparent;
   }
   50% {
-    border-color: rgb(255, 0, 0);
+    border-color: coral;
   }
 }
 
@@ -566,6 +566,7 @@ span {
     justify-content: flex-end;
     align-content: center;
     height: 100%;
+    right: 0;
     /* border: 1px solid red; */
     gap: 10px;
   }
