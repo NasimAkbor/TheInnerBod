@@ -134,6 +134,7 @@ function App() {
             otherValue={food}
             detail={detail}
             setOrgan={setOrgan}
+            setFood={setFood}
           />
         </div>
       </div>

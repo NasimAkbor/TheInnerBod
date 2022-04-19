@@ -16,7 +16,7 @@ function OrganData(props) {
     fetch("https://organ-api.herokuapp.com/organ-api/organs")
       .then((response) => response.json())
       .then((data) => props.setOrgan(data));
-  }, [handleSubmit]);
+  }, [diag]);
 
   return (
     <div className="organDetails">
