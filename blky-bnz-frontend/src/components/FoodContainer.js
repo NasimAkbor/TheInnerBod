@@ -4,6 +4,7 @@ import FoodData from "./FoodData.js";
 
 function FoodContainer(props) {
   let { setOrgan } = props;
+  let { setFood } = props;
 
   return (
     <div className="foodContainer">
@@ -25,7 +26,12 @@ function FoodContainer(props) {
       {props.otherValue.map(
         (data, i) =>
           data.name.includes(props.detail) && (
-            <FoodData key={i} name={data.name} food={data.food.join(", ")} />
+            <FoodData
+              key={i}
+              name={data.name}
+              food={data.food.join(", ")}
+              setFood={setFood}
+            />
           )
       )}
     </div>

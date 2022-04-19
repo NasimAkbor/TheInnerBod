@@ -9,9 +9,9 @@ export const updateOrgan = async (organ, info) => {
   }
 };
 
-export const updateFood = async (organ, info) => {
+export const updateFood = async (food, info) => {
   try {
-    const response = await api.put(`/foods/${organ}`, info);
+    const response = await api.put(`/foods/${food}`, info);
     return response.data;
   } catch (error) {
     throw error;
