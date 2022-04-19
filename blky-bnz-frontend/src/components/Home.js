@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import portrait from "../Images/WallPaper.jpeg";
 import Login from "./Login.js";
 
 function Home() {
@@ -11,8 +12,6 @@ function Home() {
 
   return (
     <div className="home">
-      {/* <img NameName="homeCover" src={portrait}></img> */}
-      {/* <Login /> */}
       <div className="titleWrap">
         <div className="title">
           <h1>
