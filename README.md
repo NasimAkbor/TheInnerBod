@@ -30,7 +30,9 @@ This repo is the the frontend built with React, JavaScript, HTML, CSS and of a p
 
 <br />
 <p>
-<img align="left" width="300px" src="https://i.imgur.com/r1XpK5A.png">The site visualizes and highlights different organs and breaks down their category, posssible issues that can occur and provides a list of beneficial foods to intake to improve the respective organ.<img align="right" width="300px" src="https://i.imgur.com/Qk2prxz.png">
+<img align="top" width="300px" src="https://i.imgur.com/r1XpK5A.png">The site visualizes and highlights different organs and breaks down their category, posssible issues that can occur and provides a list of beneficial foods to intake to improve the respective organ.
+
+<img align="bottom" width="300px" src="https://i.imgur.com/Qk2prxz.png">
 </p>
 
 <br/>
@@ -41,7 +43,7 @@ This repo is the the frontend built with React, JavaScript, HTML, CSS and of a p
 1. React Native Implementation
 2. Increased Information
 3. Authentication Implementation 
-4. IndividualAccounts 
+4. Individual Accounts 
 
 
 
