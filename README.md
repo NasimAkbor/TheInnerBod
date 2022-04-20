@@ -30,7 +30,7 @@ This repo is the the frontend built with React, JavaScript, HTML, CSS and of a p
 
 <br />
 <p>
-<img align="left" width="150px" src="https://i.imgur.com/r1XpK5A.png">The site visualizes and highlights different organs and breaks down their category, posssible issues that can occur and provides a list of beneficial foods to intake to improve the respective organ.<img align="right" width="150px" src="https://i.imgur.com/Qk2prxz.png">
+<img align="left" width="200px" src="https://i.imgur.com/r1XpK5A.png">The site visualizes and highlights different organs and breaks down their category, posssible issues that can occur and provides a list of beneficial foods to intake to improve the respective organ.<img align="right" width="200px" src="https://i.imgur.com/Qk2prxz.png">
 </p>
 
 <br/>
