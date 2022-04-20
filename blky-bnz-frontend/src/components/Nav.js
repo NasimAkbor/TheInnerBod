@@ -1,11 +1,17 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 
 function Nav(prop) {
+  function refreshPage() {
+    window.location.href = "/";
+  }
+
   return (
     <nav>
       <div className="navTab">
-        <Link className="individualTab" onClick={prop.click} to="/">
+        <Link className="individualTab" onClick={refreshPage} to="/">
           home
         </Link>
       </div>

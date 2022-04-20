@@ -36,6 +36,7 @@ function App() {
         <div className="bigContainer">
           <div className="anatomy">
             <Routes>
+              {/* render={(props) => <MyComponent key={props.location.key} />} */}
               <Route path="/" element={<Home />}></Route>
               <Route
                 path="/sensory"
@@ -51,7 +52,6 @@ function App() {
                   </Fragment>
                 }
               ></Route>
-
               <Route
                 path="/skeletal"
                 element={
@@ -66,7 +66,6 @@ function App() {
                   </Fragment>
                 }
               ></Route>
-
               <Route
                 path="/digestive"
                 element={
@@ -81,7 +80,6 @@ function App() {
                   </Fragment>
                 }
               ></Route>
-
               <Route
                 path="/respiratory"
                 element={
@@ -110,7 +108,6 @@ function App() {
                   </Fragment>
                 }
               ></Route>
-
               <Route
                 path="/nervous"
                 element={
