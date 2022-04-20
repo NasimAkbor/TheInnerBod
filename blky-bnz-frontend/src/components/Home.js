@@ -1,6 +1,4 @@
 import { useState, useEffect } from "react";
-import portrait from "../Images/WallPaper.jpeg";
-import Login from "./Login.js";
 
 function Home() {
   const text = ["Health ", "Wellness ", "Relaxation", "Nutrition"];

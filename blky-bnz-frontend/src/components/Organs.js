@@ -5,7 +5,6 @@ function Organs(props) {
   let { setDetail } = props;
 
   function organChange(e) {
-    console.log(e.target.dataset.key);
     setDetail(e.target.dataset.key);
   }
 

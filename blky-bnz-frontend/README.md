@@ -1,70 +1,72 @@
-# Getting Started with Create React App
+[![Netlify Status](https://api.netlify.com/api/v1/badges/c02d66f4-8cd2-4a38-b299-b92b1bec2050/deploy-status)](https://theinnerbod.netlify.app/)
+[![GitHub issues](https://img.shields.io/github/issues/NasimAkbor/MERN-P8)](https://github.com/NasimAkbor/MERN-P8/issues)
+### A joint effort with: 
+<ul>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+Lawrence Yee | [Newbz521][github] 
 
-In the project directory, you can run:
 
-### `npm start`
+David White-Goode | [forextroll][github2]
+</ul>
+<br/>
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+# The Inner Bod ⚕️
+#### Powered by BLKYBNZ ('💪Bulky Bonez🩻')
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+<br/>
 
-### `npm test`
+<img align="center" src="https://i.imgur.com/7y3MlqD.png">
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+<br/>
 
-### `npm run build`
+This repo is the the frontend built with React, JavaScript, HTML, CSS and of a project that aims to provide users with helpful information on how best to take care of different parts of their body, as well as, allow them to keep track of any foods they might want to add to their diet or diagnoses they might encounter.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### [Link to Backend][git3]
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+<br />
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+<br />
+<p>
+<img align="top" width="400px" src="https://i.imgur.com/r1XpK5A.png">
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+The site visualizes and highlights different organs and breaks down their category, posssible issues that can occur and provides a list of beneficial foods to intake to improve the respective organ.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+<img align="bottom" width="400px" src="https://i.imgur.com/Qk2prxz.png">
+</p>
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+<br/>
 
-## Learn More
+# Future Updates
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+1. React Native Implementation
+2. Increased Information
+3. Authentication Implementation 
+4. Individual Accounts 
 
-### Code Splitting
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
 
-### Analyzing the Bundle Size
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
 
-### Making a Progressive Web App
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
 
-### Advanced Configuration
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
 
-### Deployment
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
 
-### `npm run build` fails to minify
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+
+
+
+
+
+
+
+
+[github]: https://github.com/Newbz521
+[github2]: https://github.com/forextroll
+[git3]: https://github.com/forextroll/P8.BKND

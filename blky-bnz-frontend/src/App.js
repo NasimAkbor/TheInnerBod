@@ -1,4 +1,3 @@
-import logo from "./logo.svg";
 import "./App.css";
 import { Fragment, useEffect, useState } from "react";
 import TestSubject from "./TestSubject";
@@ -36,91 +35,54 @@ function App() {
         <div className="bigContainer">
           <div className="anatomy">
             <Routes>
-              {/* render={(props) => <MyComponent key={props.location.key} />} */}
               <Route path="/" element={<Home />}></Route>
-              <Route
-                path="/sensory"
-                element={
-                  <Fragment>
-                    <TestSubject />
-                    <System type={"sensory"} />
-                    <Organs
-                      type={"sensory"}
-                      value={organ}
-                      setDetail={setDetail}
-                    />
-                  </Fragment>
-                }
+              <Route path="/sensory" element={
+                <Fragment>
+                  <TestSubject />
+                  <System type={"sensory"} />
+                  <Organs type={"sensory"} value={organ} setDetail={setDetail} />
+                </Fragment>
+              }
               ></Route>
-              <Route
-                path="/skeletal"
-                element={
-                  <Fragment>
-                    <TestSubject />
-                    <System type={"skeletal"} />
-                    <Organs
-                      type={"skeletal"}
-                      value={organ}
-                      setDetail={setDetail}
-                    />
-                  </Fragment>
-                }
+              <Route path="/skeletal" element={
+                <Fragment>
+                  <TestSubject />
+                  <System type={"skeletal"} />
+                  <Organs type={"skeletal"} value={organ} setDetail={setDetail} />
+                </Fragment>
+              }
               ></Route>
-              <Route
-                path="/digestive"
-                element={
-                  <Fragment>
-                    <TestSubject />
-                    <System type={"digestive"} />
-                    <Organs
-                      type={"digestive"}
-                      value={organ}
-                      setDetail={setDetail}
-                    />
-                  </Fragment>
-                }
+              <Route path="/digestive" element={
+                <Fragment>
+                  <TestSubject />
+                  <System type={"digestive"} />
+                  <Organs type={"digestive"} value={organ} setDetail={setDetail} />
+                </Fragment>
+              }
               ></Route>
-              <Route
-                path="/respiratory"
-                element={
-                  <Fragment>
-                    <TestSubject />
-                    <System type={"respiratory"} />
-                    <Organs
-                      type={"respiratory"}
-                      value={organ}
-                      setDetail={setDetail}
-                    />
-                  </Fragment>
-                }
+              <Route path="/respiratory" element={
+                <Fragment>
+                  <TestSubject />
+                  <System type={"respiratory"} />
+                  <Organs type={"respiratory"} value={organ} setDetail={setDetail} />
+                </Fragment>
+              }
               ></Route>
-              <Route
-                path="/cardiovascular"
-                element={
-                  <Fragment>
-                    <TestSubject />
-                    <System type={"cardiovascular"} />
-                    <Organs
-                      type={"cardiovascular"}
-                      value={organ}
-                      setDetail={setDetail}
-                    />
-                  </Fragment>
-                }
+              <Route path="/cardiovascular" element={
+                <Fragment>
+                  <TestSubject />
+                  <System type={"cardiovascular"} />
+                  <Organs type={"cardiovascular"} value={organ} setDetail={setDetail} />
+                </Fragment>
+              }
               ></Route>
-              <Route
-                path="/nervous"
-                element={
-                  <Fragment>
-                    <TestSubject />
-                    <System type={"nervous"} />
-                    <Organs
-                      type={"nervous"}
-                      value={organ}
-                      setDetail={setDetail}
-                    />
-                  </Fragment>
-                }
+              <Route path="/nervous" element={
+                <Fragment>
+                  <TestSubject />
+                  <System type={"nervous"} />
+                  <Organs type={"nervous"} value={organ} setDetail={setDetail} />
+                </Fragment>
+              }
               ></Route>
             </Routes>
           </div>

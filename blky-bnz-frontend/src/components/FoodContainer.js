@@ -13,7 +13,6 @@ function FoodContainer(props) {
           data.name.includes(props.detail) && (
             <OrganData
               key={i}
-              //images={data.images}
               id={data._id}
               name={data.name}
               system={data.system}
