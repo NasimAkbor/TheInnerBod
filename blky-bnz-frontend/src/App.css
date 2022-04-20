@@ -435,7 +435,7 @@ nav {
 .home {
   display: flex;
   width: fit-content;
-  height: 80vh;
+  height: 75vh;
   width: 100%;
   font-size: 100px;
   justify-content: flex-start;
@@ -443,7 +443,7 @@ nav {
   flex-direction: column;
   background-image: url("./Images/WallPaper.jpeg");
   background-size: cover;
-  background-position: center;
+  background-position: top;
   opacity: 0.85;
 }
 .container {
