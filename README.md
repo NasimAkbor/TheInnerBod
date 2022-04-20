@@ -1,4 +1,4 @@
-[![Netlify Status](https://api.netlify.com/api/v1/badges/c02d66f4-8cd2-4a38-b299-b92b1bec2050/deploy-status)](https://graceful-bavarois-3b1576.netlify.app/)
+[![Netlify Status](https://api.netlify.com/api/v1/badges/c02d66f4-8cd2-4a38-b299-b92b1bec2050/deploy-status)](https://theinnerbod.netlify.app/)
 [![GitHub issues](https://img.shields.io/github/issues/NasimAkbor/MERN-P8)](https://github.com/NasimAkbor/MERN-P8/issues)
 ### A joint effort with: 
 <ul>
